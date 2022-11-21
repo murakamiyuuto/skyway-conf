@@ -125,34 +125,34 @@ export const listenStoreChanges = ({
     reaction(
       () => room.isJoined,
       (isJoined) =>
-        isJoined && notification.showInfo(`You joined the room ${room.name}`)
+        isJoined && notification.showInfo(`入室しました ${room.name}`)
     ),
     reaction(
       () => media.isAudioTrackMuted,
       (muted) =>
-        notification.showInfo(`Mic input was ${muted ? "muted" : "unmuted"}`)
+        notification.showInfo(`マイクを ${muted ? "ミュートしました" : "ミュート解除しました"}`)
     ),
     reaction(
       () => media.isVideoTrackMuted,
       (muted) =>
-        notification.showInfo(`Video was ${muted ? "muted" : "unmuted"}`)
+        notification.showInfo(`ビデオを ${muted ? "ミュートしました" : "ミュート解除しました"}`)
     ),
     observe(media, "audioDeviceId", (change) => {
       if (change.oldValue === null) {
         // skip initial value
         return;
       }
-      notification.showInfo("Mic input was changed");
+      notification.showInfo("マイクを変更しました");
     }),
     observe(media, "videoDeviceId", (change) => {
       if (change.oldValue === null) {
-        notification.showInfo("Video input was enabled");
+        notification.showInfo(" カメラを有効にしました");
         return;
       }
       if (change.newValue !== null) {
-        notification.showInfo("Video input was changed");
+        notification.showInfo("カメラを変更しました");
       } else {
-        notification.showInfo("Video input was disabled");
+        notification.showInfo("カメラを無効にしました");
       }
     }),
     reaction(
@@ -169,7 +169,7 @@ export const listenStoreChanges = ({
       () => client.displayName,
       (name) => {
         localStorage.setItem("SkyWayConf.dispName", name.trim());
-        notification.showInfo("Display name saved");
+        notification.showInfo("名前を保存しました");
       },
       { delay: 2000 }
     ),

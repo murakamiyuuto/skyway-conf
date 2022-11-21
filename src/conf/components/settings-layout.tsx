@@ -112,7 +112,7 @@ const SettingsLayout: FunctionComponent<Props> = ({
           />
         </SettingsItemName>
         <SettingsItemDevice label="マイク">
-          <SettingsDeviceToggler label="Disable" disabled={true} />
+          <SettingsDeviceToggler label="無効" disabled={true} />
           <SettingsDeviceSelector
             deviceId={audioDeviceId || ""}
             inDevices={audioInDevices}
@@ -124,7 +124,7 @@ const SettingsLayout: FunctionComponent<Props> = ({
             {videoType === "camera" ? (
               <>
                 <SettingsDeviceToggler
-                  label="Disable"
+                  label="無効"
                   onClick={onClickDisableUserVideo}
                 />
                 <SettingsDeviceSelector
@@ -146,11 +146,11 @@ const SettingsLayout: FunctionComponent<Props> = ({
             {videoType === "display" ? (
               <>
                 <SettingsDeviceToggler
-                  label="Disable"
+                  label="無効"
                   onClick={onClickDisableDisplayVideo}
                 />
                 <SettingsDeviceToggler
-                  label="Use another dispaly"
+                  label=" 共有画面の変更"
                   onClick={onClickEnableDisplayVideo}
                 />
               </>
@@ -171,11 +171,11 @@ const SettingsLayout: FunctionComponent<Props> = ({
           disabled={isReEntering || !isDisplayNameValid}
         >
           {isReEntering ? (
-            "RE-ENTERING THE ROOM"
+            "再入室"
           ) : (
             <>
               <Icon name={isJoined ? "done" : "meeting_room"} />
-              <span>{isJoined ? "CLOSE SETTINGS" : "入室する"}</span>
+              <span>{isJoined ? "設定を閉じる" : "入室する"}</span>
             </>
           )}
         </button>
@@ -220,7 +220,7 @@ const buttonWrapStyle = css({
 const doneButtonStyle = css({
   display: "inline-flex",
   alignItems: "center",
-  backgroundColor: globalColors.blue,
+  backgroundColor: globalColors.orange,
   color: globalColors.white,
   height: 40,
   border: 0,
