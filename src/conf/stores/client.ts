@@ -14,7 +14,7 @@ class ClientStore {
     this.hasGetDisplayMedia = false;
     this.hasUserVideoDevice = false;
     this.isReady = false;
-    this.displayName = "YOUR_NAME";
+    this.displayName = "";
     this.parsedBrowser = null;
   }
 

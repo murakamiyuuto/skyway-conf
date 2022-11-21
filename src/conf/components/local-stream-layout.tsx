@@ -127,7 +127,7 @@ const minimizeStyle = css({
   transform: "translateX(-85%)",
 });
 
-const localStreamWidth = 240;
+const localStreamWidth = 500;
 const videoStyle = css({
   position: "relative",
   width: localStreamWidth,

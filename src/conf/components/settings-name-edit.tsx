@@ -22,7 +22,7 @@ const SettingsNameEdit: FunctionComponent<Props> = ({
         type="text"
         value={dispName}
         maxLength={10}
-        placeholder="Enter your name"
+        placeholder="名前を入力してください"
         onChange={(ev) => {
           // ignore while IME compositing
           if (ev.target.value.length > 10) {
@@ -49,7 +49,7 @@ const nameStyle = css({
   borderBottom: `1px solid ${globalColors.gray}`,
   fontSize: "1.1rem",
   "&:focus": {
-    borderColor: globalColors.blue,
+    borderColor: globalColors.orange,
   },
 });
 

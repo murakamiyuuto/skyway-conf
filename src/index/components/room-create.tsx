@@ -106,7 +106,7 @@ const buttonWrapStyle = css({
 });
 
 const createButtonStyle = css({
-  backgroundColor: globalColors.blue,
+  backgroundColor: globalColors.orange,
   color: globalColors.white,
   height: 40,
   border: 0,

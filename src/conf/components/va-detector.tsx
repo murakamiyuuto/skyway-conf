@@ -39,6 +39,6 @@ const decibelToStyle = (db: number) => {
 };
 
 const wrapperStyle = css({
-  backgroundColor: globalColors.blue,
+  backgroundColor: globalColors.orange,
   willChange: ["height", "opacity"],
 });

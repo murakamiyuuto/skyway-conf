@@ -9,6 +9,7 @@ const Loader: FunctionComponent<{}> = () => (
 export default Loader;
 
 const wrapperStyle = css({
+  
   position: "absolute",
   top: 0,
   left: 0,
@@ -16,4 +17,5 @@ const wrapperStyle = css({
   bottom: 0,
   margin: "auto",
   width: 160,
+  
 });

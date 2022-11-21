@@ -1,6 +1,6 @@
 import { css, keyframes } from "@emotion/core";
 
-export const fontSize = 16;
+export const fontSize = 20;
 
 export const globalColors = {
   blue: "#005ece",
@@ -9,6 +9,7 @@ export const globalColors = {
   gray: "#eee",
   white: "#fff",
   black: "#111",
+  orange: "#ef6c35"
 };
 
 export const animation = {
@@ -29,7 +30,7 @@ export const globalStyle = css({
     fontWeight: "lighter",
     lineHeight: 1.5,
     height: "100vh",
-    background: `linear-gradient(45deg, ${globalColors.lightblue}, ${globalColors.blue})`,
+    background: `linear-gradient(45deg, ${globalColors.orange}, ${globalColors.orange})`,
   },
   "#app-root": {
     height: "100vh",
