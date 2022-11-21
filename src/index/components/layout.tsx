@@ -8,13 +8,13 @@ interface Props {
 }
 const Layout: FunctionComponent<Props> = ({ children }: Props) => (
   <div css={wrapperStyle}>
-    <h1 css={headStyle}>SkyWay Conference</h1>
-    <p css={pStyle}>Video conference on web browser</p>
+    <h1 css={headStyle}>Randomcall</h1>
+    <p css={pStyle}></p>
 
     <div css={contentStyle}>{children}</div>
 
     <p css={pStyle}>
-      No registration or installs! Just create a room and share the link.
+
     </p>
    
   </div>
@@ -43,7 +43,7 @@ const contentStyle = css({
 const headStyle = css({
   margin: 0,
   marginBottom: -8,
-  color: globalColors.white,
+  color: globalColors.black,
   fontSize: "2.5rem",
 });
 

@@ -14,7 +14,7 @@ interface Props {
   onSubmit: (init: RoomInit) => void;
 }
 const RoomCreate: FunctionComponent<Props> = (props) => {
-  const [roomId, setRoomId] = useState("");
+  const [roomId, setRoomId] = useState("98275323");
   const [roomType, setRoomType] = useState("sfu");
   const [isRoomIdValid, setRoomIdValid] = useState(true);
 
@@ -27,11 +27,10 @@ const RoomCreate: FunctionComponent<Props> = (props) => {
       }}
     >
       <div css={itemStyle}>
-        <div>ROOM ID</div>
+      
         <input
-          type="text"
+          type="hidden"
           value={roomId}
-          placeholder="room-name"
           onChange={(ev) => setRoomId(ev.target.value)}
           onBlur={() => setRoomIdValid(isValidRoomId(roomId))}
           required
@@ -40,35 +39,19 @@ const RoomCreate: FunctionComponent<Props> = (props) => {
           css={roomIdStyle}
         />
       </div>
-      <span css={tipStyle}>
-        {isRoomIdValid ? "" : "half width, 4~16 characters are required!"}
-      </span>
+     
 
-      <div css={itemStyle}>
-        <div>ROOM TYPE</div>
-        <div>
-          {["sfu", "mesh"].map((type) => (
-            <label key={type} css={roomTypeStyle}>
-              <input
-                type="radio"
-                onChange={() => setRoomType(type)}
-                value={roomType}
-                checked={roomType === type}
-                name="room-type"
-              />{" "}
-              {type}
-            </label>
-          ))}
-        </div>
-      </div>
-
+      
+          
+         
+       
       <div css={buttonWrapStyle}>
         <button
           css={createButtonStyle}
           type="submit"
           disabled={!isValidRoomId(roomId)}
         >
-          CREATE ROOM
+          マッチメイキング
         </button>
       </div>
     </form>

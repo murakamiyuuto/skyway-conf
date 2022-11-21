@@ -104,14 +104,14 @@ const SettingsLayout: FunctionComponent<Props> = ({
       </div>
 
       <div css={settingsStyle}>
-        <SettingsItemName label="NAME">
+        <SettingsItemName label="名前">
           <SettingsNameEdit
             defaultDispName={defaultDispName}
             isInvalid={!isDisplayNameValid}
             onChangeDispName={onChangeDispName}
           />
         </SettingsItemName>
-        <SettingsItemDevice label="MIC.">
+        <SettingsItemDevice label="マイク">
           <SettingsDeviceToggler label="Disable" disabled={true} />
           <SettingsDeviceSelector
             deviceId={audioDeviceId || ""}
@@ -120,7 +120,7 @@ const SettingsLayout: FunctionComponent<Props> = ({
           />
         </SettingsItemDevice>
         {hasUserVideoDevice ? (
-          <SettingsItemDevice label="CAMERA">
+          <SettingsItemDevice label="カメラ">
             {videoType === "camera" ? (
               <>
                 <SettingsDeviceToggler
@@ -135,14 +135,14 @@ const SettingsLayout: FunctionComponent<Props> = ({
               </>
             ) : (
               <SettingsDeviceToggler
-                label="Enable"
+                label="有効"
                 onClick={onClickEnableUserVideo}
               />
             )}
           </SettingsItemDevice>
         ) : null}
         {hasGetDisplayMedia ? (
-          <SettingsItemDevice label="DISPLAY">
+          <SettingsItemDevice label="画面共有">
             {videoType === "display" ? (
               <>
                 <SettingsDeviceToggler
@@ -156,7 +156,7 @@ const SettingsLayout: FunctionComponent<Props> = ({
               </>
             ) : (
               <SettingsDeviceToggler
-                label="Enable"
+                label="有効"
                 onClick={onClickEnableDisplayVideo}
               />
             )}
@@ -175,7 +175,7 @@ const SettingsLayout: FunctionComponent<Props> = ({
           ) : (
             <>
               <Icon name={isJoined ? "done" : "meeting_room"} />
-              <span>{isJoined ? "CLOSE SETTINGS" : "ENTER THIS ROOM"}</span>
+              <span>{isJoined ? "CLOSE SETTINGS" : "入室する"}</span>
             </>
           )}
         </button>
