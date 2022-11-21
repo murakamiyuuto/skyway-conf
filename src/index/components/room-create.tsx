@@ -101,7 +101,7 @@ const roomIdStyle = css({
   fontSize: "1.2rem",
   padding: "4px 8px",
   "&:focus": {
-    borderColor: globalColors.blue,
+    borderColor: globalColors.white,
   },
 });
 

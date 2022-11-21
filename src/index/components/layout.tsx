@@ -16,14 +16,7 @@ const Layout: FunctionComponent<Props> = ({ children }: Props) => (
     <p css={pStyle}>
       No registration or installs! Just create a room and share the link.
     </p>
-    <a
-      css={logoStyle}
-      href="https://webrtc.ecl.ntt.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img src="./images/logo.svg" alt="SkyWay" />
-    </a>
+   
   </div>
 );
 
@@ -50,13 +43,13 @@ const contentStyle = css({
 const headStyle = css({
   margin: 0,
   marginBottom: -8,
-  color: globalColors.lightblue,
+  color: globalColors.white,
   fontSize: "2.5rem",
 });
 
 const pStyle = css({
   margin: "16px auto",
-  color: globalColors.lightblue,
+  color: globalColors.white,
   fontSize: "1.2rem",
 });
 
