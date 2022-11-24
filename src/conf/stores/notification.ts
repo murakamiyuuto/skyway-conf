@@ -23,11 +23,11 @@ class NotificationStore {
   }
 
   showJoin(name: string) {
-    this.show("person", `${name} joined`, 2000);
+    this.show("person", `${name} が入室しました`, 2000);
   }
 
   showLeave(name: string) {
-    this.show("person", `${name} left`, 2000);
+    this.show("person", `${name} が退室しました`, 2000);
   }
 
   private show(type: NotificationType, text: string, duration: number) {
