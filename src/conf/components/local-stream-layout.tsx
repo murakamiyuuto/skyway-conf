@@ -70,14 +70,14 @@ const LocalStreamLayout: FunctionComponent<Props> = ({
             <IconButton
               name="keyboard_arrow_right"
               showEdge={true}
-              title="Maximize"
+              title="最大化"
               onClick={() => setMinimize(false)}
             />
           ) : (
             <IconButton
               name="keyboard_arrow_left"
               showEdge={true}
-              title="Minimize"
+              title="最小化"
               onClick={() => setMinimize(true)}
             />
           )}
