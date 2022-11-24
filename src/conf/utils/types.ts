@@ -31,10 +31,12 @@ export type RoomData =
 interface RoomDataStat {
   type: "stat";
   payload: RoomStat;
+  
 }
 interface RoomDataChat {
   type: "chat";
   payload: RoomChat;
+  
 }
 interface RoomDataReaction {
   type: "reaction";
