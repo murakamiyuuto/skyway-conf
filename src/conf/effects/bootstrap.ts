@@ -157,13 +157,13 @@ export const listenStoreChanges = ({
     }),
     reaction(
       () => room.castRequestCount,
-      () => notification.showInfo("Your video was casted to everyone")
+      () => notification.showInfo("")
     ),
     reaction(
       () => room.myLastReaction,
       (reaction) =>
         reaction &&
-        notification.showInfo(`You reacted with ${reaction.reaction}`)
+        notification.showInfo(` ${reaction.reaction}`)
     ),
     reaction(
       () => client.displayName,

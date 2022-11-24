@@ -4,7 +4,7 @@ const log = debug("effect:exit");
 export const exitRoom = () => () => {
   log("exitRoom()");
 
-  const yes = confirm("Are you sure to exit?");
+  const yes = confirm("退出しますか？");
   if (!yes) {
     log("canceled");
     return;

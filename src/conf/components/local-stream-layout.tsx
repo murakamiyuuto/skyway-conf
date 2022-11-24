@@ -50,20 +50,20 @@ const LocalStreamLayout: FunctionComponent<Props> = ({
             <IconButton
               name="cast"
               showEdge={true}
-              title="Cast your video"
+              title=" 画面をキャストする"
               onClick={onClickCastVideo}
             />
           )}
           <IconButton
             name="info"
             showEdge={true}
-            title="Toggle stream info"
+            title="通信情報を表示"
             onClick={() => setInfoShown(!isInfoShown)}
           />
           <IconButton
             name="settings"
             showEdge={true}
-            title="Open settings"
+            title="設定を開く"
             onClick={onClickOpenSettings}
           />
           {isMinimize ? (
@@ -97,13 +97,13 @@ const LocalStreamLayout: FunctionComponent<Props> = ({
                 {videoType === null ? null : (
                   <IconButton
                     name={isVideoTrackMuted ? "videocam_off" : "videocam"}
-                    title={isVideoTrackMuted ? "Unmute video" : "Mute video"}
+                    title={isVideoTrackMuted ? "ビデオミュートを解除する" : "ビデオをミュートする"}
                     onClick={onClickToggleVideoMuted}
                   />
                 )}
                 <IconButton
                   name={isAudioTrackMuted ? "mic_off" : "mic"}
-                  title={isAudioTrackMuted ? "Unmute audio" : "Mute audio"}
+                  title={isAudioTrackMuted ? "ミュートを解除する" : "マイクをミュートする"}
                   onClick={onClickToggleAudioMuted}
                 />
               </>

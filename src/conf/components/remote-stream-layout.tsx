@@ -43,7 +43,7 @@ const RemoteStreamLayout: FunctionComponent<Props> = ({
           <IconButton
             name="info"
             showEdge={true}
-            title="Toggle stream info"
+            title=" 通信情報を表示"
             onClick={() => setInfoShown(!isInfoShown)}
           />
         </div>

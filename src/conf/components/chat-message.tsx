@@ -10,7 +10,7 @@ interface Props {
 const ChatMessage: FunctionComponent<Props> = ({ chat }: Props) => (
   <div css={chat.isMine ? [wrapperStyle, mineStyle] : wrapperStyle}>
     <div css={headStyle}>
-      {chat.from} at {new Date(chat.time).toLocaleTimeString()}
+      {chat.from} からのメッセージ {new Date(chat.time).toLocaleTimeString()}
     </div>
     {chat.text}
   </div>

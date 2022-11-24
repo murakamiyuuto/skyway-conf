@@ -26,11 +26,11 @@ const StatsLayout: FunctionComponent<Props> = ({
       {isSfu ? (
         <div css={scrollerStyle}>
           <details open>
-            <summary>Stats summary</summary>
+            <summary>統計情報</summary>
             <StatsSummary rtcStats={rtcStats} />
           </details>
           <details>
-            <summary>Stats dump</summary>
+            <summary>詳細</summary>
             <StatsDump rtcStats={rtcStats} />
           </details>
         </div>
