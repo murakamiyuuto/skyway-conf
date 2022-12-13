@@ -78,7 +78,7 @@ export const initAudioDeviceAndClient = ({
       throw ui.showError(new Error("getUserDevices() returns null"));
     }
     if (audioInDevices.length === 0) {
-      throw ui.showError(new Error("At least one audio input device needed!"));
+      throw ui.showError(new Error("オーディオデバイスを接続してください"));
     }
 
     log(

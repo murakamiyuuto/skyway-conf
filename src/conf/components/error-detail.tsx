@@ -10,7 +10,7 @@ const Error: FunctionComponent<Props> = ({ error }) => (
   <div css={wrapperStyle}>
     <h2 css={headStyle}>{error.message || error.name}</h2>
     <pre css={detailStyle}>
-      {error.stack || "Stack trace is not available."}
+      {error.stack || "権限エラー　ブラウザのカメラかマイクの許可設定を確認してください"}
     </pre>
   </div>
 );
