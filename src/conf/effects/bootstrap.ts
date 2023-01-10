@@ -23,7 +23,7 @@ export const checkRoomSetting = ({
 
   if (!isValidRoomType(roomType)) {
     throw ui.showError(
-      new Error("Invalid room type! it should be `sfu` or `mesh`.")
+      new Error("認証エラー！最初からやり直してください")
     );
   }
   if (!isValidRoomId(roomId)) {

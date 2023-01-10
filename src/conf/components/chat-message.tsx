@@ -7,9 +7,11 @@ import { RoomChat } from "../utils/types";
 interface Props {
   chat: RoomChat;
 }
+
+
 const ChatMessage: FunctionComponent<Props> = ({ chat }: Props) => (
   <div css={chat.isMine ? [wrapperStyle, mineStyle] : wrapperStyle}>
-    <div css={headStyle}>
+    <div css={headStyle}>あああああああああああ
       {chat.from} からのメッセージ {new Date(chat.time).toLocaleTimeString()}
     </div>
     {chat.text}

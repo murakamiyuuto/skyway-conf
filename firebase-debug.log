@@ -1,0 +1,150 @@
+[debug] [2022-12-21T04:42:45.478Z] ----------------------------------------------------------------------
+[debug] [2022-12-21T04:42:45.480Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\206014\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-12-21T04:42:45.480Z] CLI Version:   11.19.0
+[debug] [2022-12-21T04:42:45.481Z] Platform:      win32
+[debug] [2022-12-21T04:42:45.481Z] Node Version:  v16.18.0
+[debug] [2022-12-21T04:42:45.482Z] Time:          Wed Dec 21 2022 13:42:45 GMT+0900 (日本標準時)
+[debug] [2022-12-21T04:42:45.482Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-21T04:42:45.485Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-12-21T04:42:45.568Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-21T04:42:45.569Z] > authorizing via signed-in user (206014@std.hi-joho.ac.jp)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\206014\Desktop\sotuken\wakaba-firebase
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2022-12-21T04:42:46.623Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-12-21T04:42:46.624Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-12-21T04:43:24.223Z] Using project from CLI flag: wakaba-random-call
+[debug] [2022-12-21T04:43:24.225Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wakaba-random-call [none]
+[debug] [2022-12-21T04:43:24.840Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wakaba-random-call 200
+[debug] [2022-12-21T04:43:24.840Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wakaba-random-call {"projectId":"wakaba-random-call","projectNumber":"225806253989","displayName":"wakaba-random call","name":"projects/wakaba-random-call","resources":{"hostingSite":"wakaba-random-call","realtimeDatabaseInstance":"wakaba-random-call-default-rtdb","storageBucket":"wakaba-random-call.appspot.com","locationId":"asia-east2"},"state":"ACTIVE","etag":"1_38980286-0dc1-468a-b2e6-f975812d99bf"}
+[info] i  Using project wakaba-random-call (wakaba-random call) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2022-12-21T04:43:24.857Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/firebasedatabase.googleapis.com [none]
+[debug] [2022-12-21T04:43:24.857Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/wakaba-random-call
+[debug] [2022-12-21T04:43:27.061Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/firebasedatabase.googleapis.com 200
+[debug] [2022-12-21T04:43:27.061Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2022-12-21T04:43:27.066Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/wakaba-random-call/locations/-/instances/wakaba-random-call-default-rtdb [none]
+[debug] [2022-12-21T04:43:27.811Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/wakaba-random-call/locations/-/instances/wakaba-random-call-default-rtdb 200
+[debug] [2022-12-21T04:43:27.811Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/wakaba-random-call/locations/-/instances/wakaba-random-call-default-rtdb {"name":"projects/225806253989/locations/us-central1/instances/wakaba-random-call-default-rtdb","project":"projects/225806253989","databaseUrl":"https://wakaba-random-call-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2022-12-21T04:43:47.434Z] >>> [apiv2][query] GET https://wakaba-random-call-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2022-12-21T04:43:48.147Z] <<< [apiv2][status] GET https://wakaba-random-call-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2022-12-21T04:43:48.148Z] <<< [apiv2][body] GET https://wakaba-random-call-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] +  Database Rules for wakaba-random-call-default-rtdb have been written to y. 
+[info] Future modifications to y will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2022-12-21T04:43:48.157Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/firestore.googleapis.com [none]
+[debug] [2022-12-21T04:43:48.157Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/firestore.googleapis.com x-goog-quota-user=projects/wakaba-random-call
+[debug] [2022-12-21T04:43:49.468Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/firestore.googleapis.com 200
+[debug] [2022-12-21T04:43:49.468Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/firestore.googleapis.com [omitted]
+[debug] [2022-12-21T04:43:49.469Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/wakaba-random-call [none]
+[debug] [2022-12-21T04:43:50.412Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/wakaba-random-call 200
+[debug] [2022-12-21T04:43:50.412Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/wakaba-random-call {"name":"apps/wakaba-random-call","id":"wakaba-random-call","authDomain":"gmail.com","locationId":"asia-east2","codeBucket":"staging.wakaba-random-call.appspot.com","servingStatus":"SERVING","defaultHostname":"wakaba-random-call.df.r.appspot.com","defaultBucket":"wakaba-random-call.appspot.com","serviceAccount":"wakaba-random-call@appspot.gserviceaccount.com","gcrDomain":"asia.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[debug] [2022-12-21T04:43:50.412Z] database_type: CLOUD_FIRESTORE
+[debug] [2022-12-21T04:43:50.413Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-21T04:43:50.413Z] > authorizing via signed-in user (206014@std.hi-joho.ac.jp)
+[debug] [2022-12-21T04:43:50.413Z] [iam] checking project wakaba-random-call for permissions ["firebase.projects.get"]
+[debug] [2022-12-21T04:43:50.414Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/wakaba-random-call:testIamPermissions [none]
+[debug] [2022-12-21T04:43:50.414Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/wakaba-random-call:testIamPermissions x-goog-quota-user=projects/wakaba-random-call
+[debug] [2022-12-21T04:43:50.414Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wakaba-random-call:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-12-21T04:43:51.840Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/wakaba-random-call:testIamPermissions 200
+[debug] [2022-12-21T04:43:51.841Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wakaba-random-call:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-12-21T04:44:05.449Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/wakaba-random-call/releases pageSize=10&pageToken=
+[debug] [2022-12-21T04:44:07.038Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/wakaba-random-call/releases 200
+[debug] [2022-12-21T04:44:07.039Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/wakaba-random-call/releases {"releases":[{"name":"projects/wakaba-random-call/releases/cloud.firestore","rulesetName":"projects/wakaba-random-call/rulesets/3afb9394-c80a-49ac-97cd-172472d46db5","createTime":"2022-10-31T05:56:34.741760Z","updateTime":"2022-10-31T07:21:11.227955Z"},{"name":"projects/wakaba-random-call/releases/firebase.storage/wakaba-random-call.appspot.com","rulesetName":"projects/wakaba-random-call/rulesets/cd177c4e-f5d3-4c43-bbc8-8e79021c8b93","createTime":"2022-10-26T05:32:34.989649Z","updateTime":"2022-10-26T05:33:32.036969Z"}]}
+[debug] [2022-12-21T04:44:07.068Z] Found ruleset: projects/wakaba-random-call/rulesets/3afb9394-c80a-49ac-97cd-172472d46db5
+[debug] [2022-12-21T04:44:07.068Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/wakaba-random-call/rulesets/3afb9394-c80a-49ac-97cd-172472d46db5 [none]
+[debug] [2022-12-21T04:44:08.640Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/wakaba-random-call/rulesets/3afb9394-c80a-49ac-97cd-172472d46db5 200
+[debug] [2022-12-21T04:44:08.640Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/wakaba-random-call/rulesets/3afb9394-c80a-49ac-97cd-172472d46db5 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-12-21T04:44:12.952Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/wakaba-random-call/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2022-12-21T04:44:12.954Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/wakaba-random-call/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2022-12-21T04:44:13.889Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/wakaba-random-call/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2022-12-21T04:44:13.889Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/wakaba-random-call/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2022-12-21T04:44:13.966Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/wakaba-random-call/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2022-12-21T04:44:13.966Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/wakaba-random-call/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/wakaba-random-call/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[debug] [2022-12-21T04:44:13.970Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-21T04:44:13.971Z] > authorizing via signed-in user (206014@std.hi-joho.ac.jp)
+[debug] [2022-12-21T04:44:13.971Z] [iam] checking project wakaba-random-call for permissions ["firebase.projects.get"]
+[debug] [2022-12-21T04:44:13.972Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/wakaba-random-call:testIamPermissions [none]
+[debug] [2022-12-21T04:44:13.972Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/wakaba-random-call:testIamPermissions x-goog-quota-user=projects/wakaba-random-call
+[debug] [2022-12-21T04:44:13.972Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wakaba-random-call:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-12-21T04:44:14.902Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/wakaba-random-call:testIamPermissions 200
+[debug] [2022-12-21T04:44:14.902Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wakaba-random-call:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-12-21T04:44:14.902Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-12-21T04:44:14.902Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/wakaba-random-call
+[debug] [2022-12-21T04:44:14.904Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-12-21T04:44:14.904Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/wakaba-random-call
+[debug] [2022-12-21T04:44:16.362Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/runtimeconfig.googleapis.com 200
+[debug] [2022-12-21T04:44:16.362Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-12-21T04:44:16.527Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/cloudfunctions.googleapis.com 200
+[debug] [2022-12-21T04:44:16.528Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2022-12-21T04:44:16.529Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2022-12-21T04:44:16.533Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/wakaba-random-call
+[debug] [2022-12-21T04:44:18.585Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2022-12-21T04:44:18.586Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2022-12-21T04:44:28.602Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-12-21T04:44:28.602Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/wakaba-random-call
+[debug] [2022-12-21T04:44:29.918Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/cloudfunctions.googleapis.com 200
+[debug] [2022-12-21T04:44:29.918Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wakaba-random-call/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/index.js 
+[info] +  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
