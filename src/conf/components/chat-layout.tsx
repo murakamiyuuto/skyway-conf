@@ -40,7 +40,7 @@ const ChatLayout: FunctionComponent<Props> = ({
     }
     //お題を生成 
     
-    var options = ["システムメッセージ！お題1","システムメッセージ！お題2", "システムメッセージ！お題3", "システムメッセージ！お題4", "システムメッセージ！お題5", "システムメッセージ！お題6"];
+    var options = ["システムメッセージ! お題【最近やったゲーム】","システムメッセージ！お題2", "システムメッセージ！お題3", "システムメッセージ！お題4", "システムメッセージ！お題5", "システムメッセージ！お題6"];
     var randomOption = options[Math.floor(Math.random() * options.length)];
   
 
@@ -85,7 +85,7 @@ const ChatLayout: FunctionComponent<Props> = ({
           
 
           
-          <button id="submitButton" onClick={onSend}>お題生成</button>
+         
           
               
 
@@ -95,7 +95,7 @@ const ChatLayout: FunctionComponent<Props> = ({
             onClick={onSend}
           />
           
-
+          <button id="submitButton" onClick={onSend}>お題生成</button>
           
         </div>
         
