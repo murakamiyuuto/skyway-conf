@@ -3,15 +3,25 @@ import { FunctionComponent } from "react";
 import { css } from "@emotion/core";
 import { globalColors } from "../../shared/global-style";
 import { RoomChat } from "../utils/types";
+            
+
+
 
 interface Props {
   chat: RoomChat;
+ 
+  
 }
 
 
+
+
 const ChatMessage: FunctionComponent<Props> = ({ chat }: Props) => (
+  
   <div css={chat.isMine ? [wrapperStyle, mineStyle] : wrapperStyle}>
-    <div css={headStyle}>あああああああああああ
+   
+    <div css={headStyle}>
+
       {chat.from} からのメッセージ {new Date(chat.time).toLocaleTimeString()}
     </div>
     {chat.text}
