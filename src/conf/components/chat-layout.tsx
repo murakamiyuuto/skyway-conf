@@ -1,3 +1,4 @@
+
 import * as React from "react";
 import { useState, useCallback, useRef, useEffect } from "react";
 import { FunctionComponent } from "react";
@@ -14,22 +15,48 @@ interface Props {
   onClickSend: (text: string) => void;
   onClickCloser: () => void;
 }
+   
+    
+
+
 const ChatLayout: FunctionComponent<Props> = ({
+  
   chats,
   onClickCloser,
   onClickSend,
 }: Props) => {
-  const [buffer, setBuffer] = useState("");
+  const [text1, setText] = useState<string> ("");
   const onSend = useCallback(() => {
-    onClickSend(buffer);
-    setBuffer("");
-  }, [buffer, onClickSend]);
+    onClickSend(text1);
+    setText("");
+  }, [text1, onClickSend]);
 
+  
+ 
   const scrollerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (scrollerRef.current === null) {
       return;
     }
+    //お題を生成 
+    
+    var options = ["システムメッセージ！お題1","システムメッセージ！お題2", "システムメッセージ！お題3", "システムメッセージ！お題4", "システムメッセージ！お題5", "システムメッセージ！お題6"];
+    var randomOption = options[Math.floor(Math.random() * options.length)];
+  
+
+
+    const inputField = document.getElementById("inputField") as HTMLInputElement;
+    const submitButton = document.getElementById("submitButton") as HTMLButtonElement;
+    
+    submitButton.addEventListener("click", () => {
+      setText(randomOption);
+      inputField.value = randomOption;
+      
+      
+      
+      
+    });
+
     const $scroller = scrollerRef.current;
     $scroller.scrollTo({ top: $scroller.scrollHeight, behavior: "smooth" });
   }, [chats, scrollerRef]);
@@ -48,19 +75,35 @@ const ChatLayout: FunctionComponent<Props> = ({
         <div css={editorStyle}>
           <input
             type="text"
-            value={buffer}
-            onChange={(ev) => setBuffer(ev.target.value)}
+            id="inputField"
+            value={text1}
+            
+            onChange={(ev) => setText (ev.target.value)}
             css={inputStyle}
           />
+          
+          
+
+          
+          <button id="submitButton" onClick={onSend}>お題生成</button>
+          
+              
+
           <IconButton
             name="send"
-            disabled={buffer.length === 0}
+           
             onClick={onSend}
           />
+          
+
+          
         </div>
+        
       </div>
+      
     </Modal>
   );
+  
 };
 
 export default ChatLayout;

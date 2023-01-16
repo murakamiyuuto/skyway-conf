@@ -16,6 +16,7 @@ export const ChatOpener: FunctionComponent<{}> = () => {
     <Observer>
       {() => <IconButton name="chat" onClick={onClickOpenChat} />}
     </Observer>
+    
   );
 };
 
