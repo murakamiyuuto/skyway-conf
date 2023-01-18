@@ -10,5 +10,5 @@ export const exitRoom = () => () => {
     return;
   }
 
-  location.href = "wakaba-random-call.web.app/login/login_success.html";
+  location.href = "https://wakaba-random-call.web.app/login/login_success.html";
 };
