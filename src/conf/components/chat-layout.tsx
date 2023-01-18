@@ -40,7 +40,7 @@ const ChatLayout: FunctionComponent<Props> = ({
     }
     //お題を生成 
     
-    var options = ["システムメッセージ! お題【最近やったゲーム】","システムメッセージ！お題2", "システムメッセージ！お題3", "システムメッセージ！お題4", "システムメッセージ！お題5", "システムメッセージ！お題6"];
+    var options = ["システムメッセージ! お題【好きなゲーム】","システムメッセージ！お題【好きな漫画】", "システムメッセージ！お題【好きなアニメ】", "システムメッセージ！お題【最近見た動画】", "システムメッセージ！お題【好きなアーティスト】",];
     var randomOption = options[Math.floor(Math.random() * options.length)];
   
 
@@ -52,7 +52,7 @@ const ChatLayout: FunctionComponent<Props> = ({
       setText(randomOption);
       inputField.value = randomOption;
       
-      
+  
       
       
     });
