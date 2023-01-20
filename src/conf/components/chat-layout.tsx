@@ -90,9 +90,12 @@ const ChatLayout: FunctionComponent<Props> = ({
               
 
           <IconButton
+           
             name="send"
            
             onClick={onSend}
+
+            
           />
           
           <button id="submitButton" onClick={onSend}>お題生成</button>
@@ -102,6 +105,7 @@ const ChatLayout: FunctionComponent<Props> = ({
       </div>
       
     </Modal>
+    
   );
   
 };
