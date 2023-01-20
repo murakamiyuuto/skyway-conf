@@ -28,7 +28,7 @@ export default ReactionLayout;
 const wrapperStyle = css({
   position: "absolute",
   top: 0,
-  right: rightMenuTogglerHeight,
+  right: -40,
   zIndex: zIndex.modal,
 });
 
@@ -43,6 +43,7 @@ const boxStyle = css({
 const reactionStyle = css({
   width: "100%",
   height: "100%",
+  
   padding: "0 1",
   appearance: "none",
   border: "none",
