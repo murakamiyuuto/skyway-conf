@@ -26,8 +26,17 @@ const ChatLayout: FunctionComponent<Props> = ({
   onClickSend,
 }: Props) => {
   const [text1, setText] = useState<string> ("");
+  const forbiddenWords = ["死ね", "消えろ",];
   const onSend = useCallback(() => {
+    
+    for (const word of forbiddenWords) {
+      if (text1.includes(word)) {
+        alert("禁止語句が含まれています!");
+        return;
+      }
+    }
     onClickSend(text1);
+    
     setText("");
   }, [text1, onClickSend]);
 
@@ -51,11 +60,10 @@ const ChatLayout: FunctionComponent<Props> = ({
     submitButton.addEventListener("click", () => {
       setText(randomOption);
       inputField.value = randomOption;
+      });
       
-  
       
-      
-    });
+    
 
     const $scroller = scrollerRef.current;
     $scroller.scrollTo({ top: $scroller.scrollHeight, behavior: "smooth" });
