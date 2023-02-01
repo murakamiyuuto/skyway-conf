@@ -27,7 +27,7 @@ const RemoteStreamsLayout: FunctionComponent<Props> = ({
 }: Props) => (
   <div css={wrapperStyle}>
     <div css={headStyle}>
-      <span css={numberStyle}>{streams.length}</span> 11２２２参加者1111
+      <span css={numberStyle}>{streams.length}</span> 参加者
     </div>
     {streams.sort(sortByVideo).map(([peerId, stream]) => {
       const entry = stats.find(([id]) => id === peerId);
